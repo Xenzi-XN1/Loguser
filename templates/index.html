@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Expiration Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>User Expiration Checker</h1>
+        
+        <h2>Add User</h2>
+        <form id="addUserForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="date" id="expired_date" required>
+            <select id="user_type" required>
+                <option value="">Select User Type</option>
+                <option value="free">Free</option>
+                <option value="premium">Premium</option>
+            </select>
+            <button type="submit">Add User</button>
+        </form>
+        <div id="addUserResponse"></div>
+
+        <h2>Check User</h2>
+        <form id="checkUserForm">
+            <input type="text" id="checkUsername" placeholder="Username" required>
+            <button type="submit">Check User</button>
+        </form>
+        <div id="checkUserResponse"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
